@@ -1,7 +1,4 @@
 
-=======
-(https://d1eh9yux7w8iql.cloudfront.net/fo/img/logo-bm-schema.png)
->>>>>>> 334beb78e957413edadfc033cede1259d0375f79
 
 # Project: API and Web Data Scraping
 
