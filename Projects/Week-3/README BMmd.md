@@ -44,5 +44,5 @@ In the repository for Project Week 3 there are:
 Include links to your repository, slides and trello/kanban board. Feel free to include any other links associated with your project. 
 
 [Repository](https://github.com/ludovicads/data-ft-par-labs/tree/main/Projects/Week-3)  
-[Slides](https://docs.google.com/presentation/d/1nIrSBk4t7UAZ-nsH74vN_qS7-23ao-FrI-Pw1USLbcY/edit)  
+[Slides](https://docs.google.com/presentation/d/1pd1HEWkJNb6PorNNZKtnmf-v6jBtqVB32Zma4HX2zvs/edit#slide=id.g442eb61d9d_0_0)  
 [Trello](https://trello.com/b/JFjnSaXh/back-market)  

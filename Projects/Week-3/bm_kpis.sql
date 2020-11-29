@@ -1,11 +1,13 @@
 #Brand
 
 
-select brand, (sum(stockraw)/ (select sum(stockraw) from computer)*100)as stock_rate
+select brand,sum(stockraw), (sum(stockraw)/ (select sum(stockraw) from computer)*100)as stock_rate
 from computer
 group by 1
 order by 2 desc; # In Stock: HP (33%), Dell(29%) Lenovo(19%), Apple(15%)
 
+select sum(stockraw)
+from computer;
 
 select brand, count(distinct title)
 from computer
@@ -20,7 +22,7 @@ order by 2 desc; # 107 Different Articles provided by Apple vs 46 Dell and HP
 
 select *, (price_new-price)/price_new as discount 
 from computer
-order by  discount desc; Lenovo 
+order by  discount desc; #Lenovo 
 
 create temporary table discount
 select *, (price_new-price)/price_new as discount 
@@ -31,7 +33,10 @@ order by  discount desc;# 80% # is the highest discount for a Lenovo
 select brand, avg(discount)
 from discount
 group by 1
-order by 1 desc ;  # Fujitsu  products are the most discounted ones (--> having a deeper look there is only 1 title for F.)
+order by 2 desc ;  # Fujitsu  products are the most discounted ones (--> having a deeper look there is only 1 title for F.)
+
+select avg(discount)
+from discount;
 
 select *
 from computer
@@ -56,12 +61,6 @@ group by 1,2
 order by 2; 
 
 
-# Considering avg price and quality: ( not taking into consideration all the other features)
-# Stallone: around 400 euros (except for Aplle 800)
-# Eta Correct: Between 300 and 500 (except for Apple >1000)
-# Tres Bon Eta: Between 300 and 600 (except for Apple >1000)
-# Comme Neuf: Betweenn 400 and 550 (except Apple>1200)
-
  
 # Processor Speed
 
@@ -81,3 +80,8 @@ select * from computer where brand is null;
 
 select price=price_new
 from computer; # Back Market has descreases its price for real :))
+
+
+select *
+from computer
+where brand like 'F%';
